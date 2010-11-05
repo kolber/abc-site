@@ -1,0 +1,7 @@
+.content figure img { background: #fff; padding: 0.2em; -webkit-box-shadow: 0.2em 0.2em 0.7em rgba(0, 0, 0, 0.15); }
+
+a.button { display: block; width: 26em; margin: 2em 0em 1.6em -0.5em; padding: 0em 1em; background: #eee; color: #3f3f3f; border: 0em; text-align: center; font-family: 'lib mono', monospace; font-size: 0.8em; line-height: 5em;
+  -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); -o-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+a.button:hover { background: #0f0; }
+a.button em { color: #777; margin: 0em 0em 0em -0.5em; padding: 0em 1em 0em 0em; font-family: 'andale mono', monospace; }

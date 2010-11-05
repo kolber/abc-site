@@ -1,0 +1,167 @@
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>While preparing my <a href="http://workshop.germanforblack.com/">HTML workshop</a>, I’ve been re-reading W3C
+      specs in far further detail than I ever would’ve imagined. The reading experience is far from delightful. Not
+      only is the text the entire browser width in measure, but it’s dense and laborious to read. No wonder browser
+      vendors have traditionally missed subtle details.</p>
+
+    <p>The goal was to add some sane styles to the pre-existing spec pages that would vastly improve the reading
+      experience.</p>
+
+    <p>I whipped up a quick bookmarklet to load some custom CSS. I was already happy. I wrote to Anthony; a typical
+      kind of email that we would trade:</p>
+
+    <blockquote>
+      <p>From: Ben Schwarz<br>
+        To: Anthony Kolber</p>
+
+      <p>So, I’ve been trying to read specs more than ever.<br>
+        Not only is the language used some form of incomprehensible bullshit, but the readability of these pages is
+        absysmal.</p>
+
+      <p>I’ve been considering this for a few months now.</p>
+
+      <p>Why does a page have to look like (see screen shot attachment) that ugly ass bullshit?<br>
+        I think the pages could easily hide some useless information and present a little easier to read.</p>
+
+      <p>What do you think? Interested at applying some typography to the specs with me? I’m planning on writing an
+        article about it and sending it to the WHATWG and W3C mailing lists...</p>
+
+      <p>B</p>
+    </blockquote>
+
+    <p>I promptly pushed my progress to github and added Anthony as a contributor.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>Having attempted to read through some of the specs, I had to agree. They are by nature very dense documents, made
+      all the worse by a lack of proper typographic consideration. Neither of us was in a position to rewrite the specs,
+      but improving their readability was a good starting point.</p>
+  </dd>
+</dl>
+
+<h3>Typography</h3>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>I wanted the titles to be large and image-like. No spidery, thin text; it needed to cement the content that followed.
+      I chose Chunk from The league of Movable Type and used <code>@font-face</code>.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>The body typeface specified by the W3C is <code>font-family: sans-serif</code>, which ends up as Arial on Windows and
+      Helvetica on Mac OS. Not a terrible choice, but while these typefaces give a clean, structured feel to the page, they
+      are less ideal for reading large blocks of text. We switched out <code>sans-serif</code> in favour of
+      <a href="http://www.microsoft.com/typography/fonts/family.aspx?FID=4">Matthew Carter’s Georgia</a>, which has a larger
+      x-height and is properly hinted, which makes it better suited to extended on-screen reading.</p>
+  </dd>
+</dl>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>When a typographer refers to ‘the measure’, they mean the width of the text body. Simply put, when copy is too wide
+      or poorly spaced it becomes difficult to read. This was the first issue that I had; physically scanning back and forth
+      over the text was annoying and frustrating.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>The general rule for a comfortable measure is around 60–70 characters per line. On the web, each character averages
+      out to around 0.5em in width, so setting a measure of 33em should keep each line within the optimum range.</p>
+  </dd>
+</dl>
+
+<h3>Poorly defined hierarchy</h3>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>Why do I want to know about this version, the previous version, editors and previous editors before I’d read any
+      of the spec or its introduction? Perhaps this is useful internally, but for the rest of us, its just visual noise
+      that could be removed.</p>
+
+      <p>Additionally, a spec is hard to scan, but it’s even harder to decipher the different levels of hierarchy. We
+        decided to make a visual feature and pull the numbering out to the left, creating a column that overhung the main
+        text.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>We added an additional colour palette based off <code>#066</code> to help clarify the multiple levels of headings.
+      Colour variation is much easier for the eye to differentiate than the hierarchical number system the W3C employs.
+      <code>#066</code> blends nicely with the black body text — letting us emphasise links without interrupting the reading
+      flow. It also gives a nice tonal range to work with, all the way down to <code>#cff</code> which works well as a
+      background tint behind black (which we used for the main code blocks).</p>
+  </dd>
+</dl>
+
+<h3>Putting it together</h3>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>Next up, a <a href="http://userscripts.org/scripts/show/76281">userscript version</a> was in order.</p>
+    <p>The script is really simple; it just adds the styles and script tags into spec pages. The external script and style
+      files are currently hosted straight out of the Github repository.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>We have spent a bit of time writing override rules to clean up the W3C’s table and list styles and to reduce some of
+      the more unwieldy page sections. Due to the complexity and variety of spec pages, it’s an ongoing project. The styles
+      will continue to be updated as we come across more awkward type treatments throughout the specs.</p>
+  </dd>
+</dl>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>We haven’t styled every single element that we’ve come across, so if you find something that looks out of place and
+      feel like getting your hands dirty, please <a href="http://github.com/benschwarz/w3c-spec-styles">fork the project</a>
+      and send me a patch.</p>
+
+    <p>What would we like to see happen with this alternate stylesheet? W3C adoption. Until the W3C start respecting the
+      quality of standards that govern the web, we will continue to live in an environment that has a poor understanding
+      of its medium. Now, with WHATWG, communication and transparency and a ‘do-over’ in HTML5, we can change the face of
+      the future of the web. Now that’s a project worth working on.</p>
+  </dd>
+</dl>
+
+<h3>The finished product</h3>
+
+<p>You can see the comparisons running live here:</p>
+
+<figure>
+  <img src="@path/w3c.png" alt="The current W3C spec styles">
+  <figcaption>The current W3C spec styles<br>
+    <a href="http://www.w3.org/TR/css3-fonts/">http://www.w3.org/TR/css3-fonts/</a></figcaption>
+</figure>
+<figure>
+  <img src="@path/index.png" alt="Our revised spec styles">
+  <figcaption>Our revised spec styles<br>
+    <a href="http://www.germanforblack.com/css-fonts-demo/index.html">http://www.germanforblack.com/css-fonts-demo/index.html</a></figcaption>
+</figure>
+
+<p><a href="http://userscripts.org/scripts/source/76281.user.js" class="button"><em>↯</em> Install the overwrite styles</a></p>
+
+<p><em>On Safari, you’ll need <a href="http://8-p.info/greasekit/">Greasekit</a> installed.<br>
+  On Firefox, you’ll need <a href="http://www.greasespot.net/">Greasemonkey</a>.<br>
+  On Chrome, it should just work straight out of the box.</em></p>
+
+<p>You can preview the userscript here:<br>
+  <a href="http://userscripts.org/scripts/review/76281">http://userscripts.org/scripts/review/76281</a></p>

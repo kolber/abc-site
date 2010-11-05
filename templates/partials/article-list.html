@@ -1,0 +1,22 @@
+if $children do
+  <div id="article-list">
+  foreach $children do
+    <article class="summary">
+      <header>
+        <time datetime="@date">@date —</time>
+        <h1><a href="@url">@title</a></h1>
+      </header>
+      <div class="content">
+        <h2>
+          @author /
+          if @collaborator do
+            @collaborator
+          endif
+        </h2>
+        @summary
+        <p>— <a href="@url">Continued</a></p>
+      </div>
+    </article>
+  endforeach
+  </div>
+endif

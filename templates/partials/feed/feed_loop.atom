@@ -1,0 +1,5 @@
+get "/articles" do
+	foreach $children do
+	  :feed_entry
+	endforeach
+end

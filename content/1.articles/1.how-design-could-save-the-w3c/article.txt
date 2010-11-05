@@ -1,0 +1,13 @@
+title: How design could save the W3C
+-
+date: May 17, 2010
+-
+author: Ben
+-
+collaborator: Anthony
+-
+summary:
+The W3C specs are an important reference for any web developer, but seem specifically designed to be unreadable. We
+felt something needed to be done, so we jumped into textmate and started writing some CSS.
+-
+content:

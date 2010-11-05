@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  :head
+  <body>
+    <div class="wrapper">
+      <header id="main-header">
+        <h1><a href="@root_path">ab+c</a> @site-name</h1>
+      </header>
+      <article class="full">
+        <header>
+          <time datetime="@date">@date —</time>
+          <h1><a href="@root_path">@title</a></h1>
+          <h2>
+            @author /
+            if @collaborator do
+             @collaborator
+            endif
+          </h2>
+        </header>
+        <div class="content">
+          <div class="summary">
+            @summary
+          </div>
+          if @content do @content endif
+          foreach $html do @content endforeach
+          <p class="end">
+            <a href="@root_path">&nbsp;</a>
+          </p>
+        </div>
+      </article>
+    </div>
+    :footer
+  </body>
+</html>
