@@ -2,9 +2,11 @@ title: Building a new site
 -
 date: November ??, 2010
 -
+published: 2010-11-??T12:00:00+11:00
+-
 author: Anthony
 -
-collaborator: Ben
+collaborator:
 -
 summary:
 ab+c’s web presence has been underwhelming for way too long. We needed to take a break from making things for other people and invest some time into our own site.
