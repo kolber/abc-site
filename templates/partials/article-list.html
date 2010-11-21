@@ -4,7 +4,7 @@ if $children do
     <article class="summary">
       <header>
         <time datetime="@published">@date —</time>
-        <h1><a href="@url">@title</a></h1>
+        <h1><a href="@url" rel="prefetch">@title</a></h1>
       </header>
       <div class="content">
         <h2>
@@ -14,7 +14,7 @@ if $children do
           endif
         </h2>
         @summary
-        <p>— <a href="@url">Continued</a></p>
+        <p>— <a href="@url" rel="prefetch">Continued</a></p>
       </div>
     </article>
   endforeach
