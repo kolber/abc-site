@@ -17,7 +17,7 @@ em { color: #3f3f3f; }
 em a { color: #3f3f3f; }
 blockquote { border-left: 0.2em solid #0c0; margin: 2em 0em 2em; padding: 0em 0em 0em 2em; font-size: 0.9em; }
 
-#main-content header, .content .anthony, footer, .content dt, article header h2, .content h2, time, figcaption { font-family: 'latin modern', monospace; color: #334; }
+#main-content header, .content .anthony, footer, .content dt, article header h2, .content h2, time, figcaption { font-family: 'latin modern', monospace; color: #223; }
 
 header, section, article, time, figure, figcaption, footer { display: block; margin: 0em; }
 
