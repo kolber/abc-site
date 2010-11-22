@@ -9,7 +9,6 @@ author: Ben
 collaborator: Anthony
 -
 summary:
-The W3C specs are an important reference for any web developer, but seem specifically designed to be unreadable. We
-felt something needed to be done, so we jumped into textmate and started writing some CSS.
+The W3C specifications are an important reference for any web developer, but seem specifically designed to be unreadable. It was time for change.
 -
 content:
