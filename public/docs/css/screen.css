@@ -82,6 +82,7 @@ article header p em { display: block; margin: 1em 0em 0em; color: #777; font-sty
 footer { clear: both; border-top: 1px dashed #ddd; margin: 3em 0em; }
 footer .wrapper { padding: 3em 0em; margin: 0em auto; }
 footer p { color: #999; font-size: 1.3em; }
+footer a { color: #999; border-bottom: 1px solid #ccc; margin: 0em 0em 0em 1.5em; }
 
 .note { font-family: sans-serif; color: #f00 !important; background: #fee; }
 .note:before { content: '— '; }
