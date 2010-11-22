@@ -28,9 +28,9 @@ Class Html extends Asset {
       $relative_path = preg_replace('/^\.\//', Helpers::relative_root_path(), $file_path);
 
       if(preg_match('/\.(xml|rss|rdf|atom)$/', $current_page_template_file)) {
-        $content = preg_replace('/\@path\/?/', $relative_path.'/', $content);
+        $content = preg_replace('/@path/', 'http://'.$_SERVER['HTTP_HOST'].'/'.preg_replace('/^\.+\/?/', '', $relative_path).'/', $content);
       } else {
-        $content = preg_replace('/\@path\/?/', $_SERVER['HTTP_HOST'], $content);
+        $content = preg_replace('/\@path\/?/', $relative_path.'/', $content);
       }
 
       $this->data['@content'] = $content;
