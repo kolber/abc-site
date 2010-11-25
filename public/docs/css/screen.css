@@ -47,6 +47,7 @@ article header p em { display: block; margin: 1em 0em 0em; color: #777; font-sty
 .summary .content p { display: inline; }
 .summary .content p:last-child { margin: 0.25em 0em 0.75em 0.4em; font-size: 1.6em; }
 .summary .content p:last-child a { color: #777; border-bottom: 1px solid #777; }
+.summary .anthony { font-size: 1.7em; }
 
 .content { float: left; width: 59em; padding: 0.4em 0em 6em; }
 .content h2 { margin: 0.2em 0em 0.4em 2em; font-size: 1.2em; color: #777; text-transform: uppercase; letter-spacing: 0.2em; }
@@ -91,10 +92,11 @@ footer a { color: #999; border-bottom: 1px solid #ccc; margin: 0em 0em 0em 1.5em
   #main-header h2:before { margin-left: -2.5em; line-height: 1.9em; }
   article header p { font-size: 2.2em; }
   article header em { font-size: 0.85em; }
-  .content dt { margin-top: 1.6em; font-size: 1.4em; }
+  .summary .anthony { font-size: 1.8em; }
+  .content dt { margin-top: 1.6em; font-size: 1.3em; }
   .content h3 { font-size: 2.1em; }
   .content .anthony dd { padding-top: 0.4em; }
-  .content .anthony p { font-size: 2.1em; }
+  .content .anthony p { font-size: 1.8em; }
   .content .anthony p em { font-size: 0.85em; }
   footer { font-size: 1.25em; }
   footer p { font-size: 1em; }
@@ -108,7 +110,7 @@ footer a { color: #999; border-bottom: 1px solid #ccc; margin: 0em 0em 0em 1.5em
   .summary .content { margin: 0.5em 0em 0em; }
   .content { margin: 2em 0em 0em; }
   .content h2 { display: none; }
-  .content dt { position: relative; top: 2em; margin: -2.4em 0em 0em; text-align: left; }
+  .content dt { position: relative; top: 1.8em; margin: -2.4em 0em 0em; text-align: left; }
   .content dd { padding: 1.2em 0em 0em; }
   .content .anthony dd { padding: 1.4em 0em 0em; }
   .content p { font-size: 1.9em; }
