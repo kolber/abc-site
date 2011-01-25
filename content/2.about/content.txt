@@ -26,7 +26,7 @@ _Twitter:_
 content:
 The core ab+c team is two people, [Anthony Kolber](http://aestheticallyloyal.com) & [Ben Schwarz](http://germanforblack.com).
 We’ve been working together for the past decade or so building things for the web. By definition, Anthony works as
-a graphic designer and Ben as a developer, but we leverage the crossover of these two skillsets to create interesting
+a graphic designer and Ben as a developer, but we leverage the crossover of these two skill sets to create interesting
 technology solutions.
 
 For the last seven or eight years, we’ve focused on building web-based applications. We’ve helped small companies, large companies,
