@@ -1,0 +1,42 @@
+<figure class="intro">
+  <!-- <img src="@path/w3c-article-header.png" alt=""> -->
+</figure>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+<pre>
+
+    You would imagine the people Adobe should care most about keeping happy are their principal customers, flash developers. But, the reality is flash sucks most of all for the people who have to develop with it.
+
+    A little background. I built a simple html5 audio player recently, so I thought, in the spirit of open source, I would add a flash fallback for the browsers lacking audio tag (and mp3) support and release the code. Obviously, that required jumping back into a flash IDE.
+
+    It has been at least 3 years since the I'd developed anything using flash, and the distance helped give a nice perspective on the whole development process. 
+
+    The major problem is that the end target for the overwhelming majority of flash projects is a browser and this is where flash development is at its most painful.
+
+    To begin with, each movie has to be compiled (generally from within the flash IDE itself), then from that point, loaded into a browser. So the process is, write code, save, compile, fix errors, compile again, flick to the browser, refresh, flick back to the IDE, fix any errors which are browser-specific & repeat. This process involves many steps which becomes very frustrating, very quickly. On top of that, it is quite common to discover you’ve been testing a cached version of the flash file the whole time-. 
+
+    -- footnote --
+    I did manage to get flash compiling through the command line, by using mxmlc from the [flex sdk] (which is free). This helped reduce the number of steps involved in compiling the flash movie and made the process feel more streamlined. --- has a nice article about [compiling with mxmlc]. 
+    -- -- 
+
+    Once the movie is finally running in the browser, any error or debug messages are completely suppressed. To get any sort of feedback you need to handroll your own debugger. This seems like a fairly major oversight and one that their ‘debug’ flash player feels like a messy and mode-error prone solution to-.
+
+    -- footnote --
+    In fact, I remember when flash pushed out the debug player as the default to _everyone_ who had the flash IDE installed. We had to go back and fix previously supressed errors on dozens of flash sites that had been live for months and whose pages were now throwing up ugly error alerts.  
+    -- --
+
+    Once you've been through all that, if you want to build javascript integration into your swf, there are a number of other hurdles. First up, you’ll need to specifically allow this through your object and embed tags, using the proprietary property, 'allowScriptAccess'. An act which is completely separated from the space you write your actionscript and poorly documented. Then you’ll need to rely on google to explain the fact that this interaction doesn’t work for locally run files and you need to be loading your flash file off a domain. It can be done locally, but only if run through a web server like Apache or lighttpd.
+
+    While not in the same league, I’d like to add strict typing to the list of frustrations. Obviously they’re following ecma recommendations here, but it really just adds another layer of complexity. I believe in the idea that the less code a developer _has to_ write the better. Flash’s strict typing & draconian error-checking feel completely at odds with this concept and continually interrupt your flow whilst developing.   
+
+    These were the irritations I needed to resolve just to get a 30 line flash file running correctly in a browser. It wasted hours of my time and left a pretty bitter taste. It’s not an experience I’d like to repeat anytime soon. 
+
+    I can understand macromedia/adobe have had many issues to overcome to build flash into what it is today and most of these issues don’t have nice simple answers. Having to rely on the object tag — the flakiest of all supported html4 tags — would make life pretty difficult. But I just can't help coming away with the feeling that there’s never been a focus on making the building and deployment of swfs a _good_ experience for the developer. 
+
+    If anything is going to save flash, it will be its users. And speaking as someone who used to be one — I would be happy to let it die.
+
+</pre>
+  </dd>
+</dl>

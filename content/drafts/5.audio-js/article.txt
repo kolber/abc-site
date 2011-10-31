@@ -1,0 +1,13 @@
+title: audio.js
+-
+date: January XX, 2011
+-
+published: 2011-01-XXT12:00:00+11:00
+-
+author: Anthony
+-
+collaborator:
+-
+summary: <p class="anthony">audio.js is a javascript library which allows the html5 &lt;audio&gt; tag to be used anywhere. It works on iOS devices and degrades gracefully, using an invisible flash movie to add support for older browsers.</p>
+-
+content:

@@ -1,0 +1,65 @@
+<figure class="intro">
+  <!-- <img src="@path/w3c-article-header.png" alt=""> -->
+</figure>
+
+<pre class="note">
+  developing mobile apps
+  - developing for webkit
+    - HTML5 APIs, CSS3, modern Javascript, native JSON parsing (in iOS 3.2+), querySelectorAll, etc.
+    - No need for graceful degradation
+    - No need for a JS library
+  - html manifest
+  - loading image
+  - css techniques
+  - performance tips
+    - imageoptim
+    - base64/stylesheets with media queries
+      - sprites
+    - box shadow is slow
+  - yql
+</pre>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    
+    <p>With the gigantic leaps forward that Mobile Safari has given us, all of a sudden the potential for building entire applications out of the holy trinity of html/css/javascript is become a serious possibility.</p>
+    
+    <p>We can see frameworks tailored towards this goal beginning to spring up and even OSX applications themselves are starting to integrate these technologies.</p>
+    
+    <p>So, being the html-minded developers that we are, we really wanted to get into some of the newer parts of the html5 spec and see if we could use them to create a mobile app worthy of competing with the native iOS apps.</p>
+    
+    <p class="note">... What does the app ACTUALLY do?</p>
+
+    <p>During the process of building the app we discovered some interesting techniques that we hadn't seen before. And because the app itself is so simple, we decided to open-source it and highlight a few interesting points.</p>
+    
+    <p>The main thing that turns a straight html app into a standalone webapp </p>
+    
+    <pre>
+      <code>
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;&quot;&gt;
+
+  &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;
+
+  &lt;link rel=&quot;apple-touch-icon-precomposed&quot; media=&quot;screen and (-webkit-min-device-pixel-ratio:1)&quot; href=&quot;/images/icons/appicon.png&quot; /&gt;
+  &lt;link rel=&quot;apple-touch-icon-precomposed&quot; media=&quot;screen and (-webkit-min-device-pixel-ratio:2)&quot; href=&quot;/images/icons/appicon-x2.png&quot; /&gt;
+
+  &lt;link rel=&quot;apple-touch-startup-image&quot; href=&quot;/images/loading.png&quot;&gt;
+
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/application.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/images.css&quot; media=&quot;only screen and (-webkit-min-device-pixel-ratio:1)&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/images-x2.css&quot; media=&quot;only screen and (-webkit-min-device-pixel-ratio:2)&quot;&gt;
+      </code>
+    </pre>
+
+    <p></p>
+
+    <p class="note">...</p>
+
+    <p>TAKE-AWAY! The first real benefit of designing a standalone html app is that you are writing for a single, modern browser. For anyone who has been supporting IE6 for the past 4 years, this is a huge one. CSS3 selectors, seriously powerful native javascript & all the html5 trimmings.</p>
+    
+    <p>TAKE-AWAY! It's easy to forget that one of the major reasons behind the popularity of the vast array of javascript libraries is to add support for modern javascript features to older browsers. Being able to use querySelectorAll, XMLHttpRequest and the native JSON parser removes need for a js framework at all for many projects.</p>
+    
+  </dd>
+</dl>

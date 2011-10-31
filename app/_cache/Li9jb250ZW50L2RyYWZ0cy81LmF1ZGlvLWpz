@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>audio.js, ab+c</title>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="../../docs/css/ie.css">
+  <![endif]-->
+  <![if !IE]>
+  <link rel="stylesheet" href="../../docs/css/screen.css">
+  <![endif]>
+
+  <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/abc-articles/">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <meta content="width=device-width; initial-scale=1.0;" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <script>var _gaq=[['_setAccount','UA-5821132-1'],['_trackPageview']];(function(d,t){ var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.async=1;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+  
+  <link rel="stylesheet" href="../../content/drafts/5.audio-js/pygments.css"> 
+  
+</head>
+  <body>
+    <div class="wrapper">
+      <header id="main-header">
+        <h1><a href="../../">ab+c</a> </h1>
+      </header>
+      <article class="full">
+        <header>
+          <time datetime="2011-01-XXT12:00:00+11:00">January XX, 2011 —</time>
+          <h1><a href="../">audio.js</a></h1>
+          <h2>
+            Anthony /
+            
+          </h2>
+        </header>
+        <div class="content">
+          <div class="summary">
+            <p class="anthony">audio.js is a javascript library which allows the html5 &lt;audio&gt; tag to be used anywhere. It works on iOS devices and degrades gracefully, using an invisible flash movie to add support for older browsers.</p>
+          </div>
+          
+          <figure class="intro">
+  <!-- <img src="../../content/drafts/5.audio-js/w3c-article-header.png" alt=""> -->
+</figure>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>The idea of audio.js is to provide a lightweight, clean javascript/actionscript implementation of &lt;audio&gt; with no javascript library dependencies (jquery, YUI, etc.).</p>
+
+    <p>The way it works is pretty simple. You include it and it loops over any &lt;audio&gt; tags on the page and creates a html player for each of them. If the &lt;audio&gt; tag isn’t supported, then it injects an invisible flash movie which acts like the &lt;audio&gt; tag would. Even when flash <em>is</em> being used, the player itself is still raw html and can be controlled with javascript and styled with css. The javascript API abstracts away the flash interaction, so you never need to know it’s there.</p>
+    <p class="note">Perhaps this sentance could start out a little more strong? Like "audio.js discovers &lt;audio&gt; tags in your markup and produces a cross-browser…"</p>
+    <h3>Getting it running</h3>
+
+    <p>The basic setup is:</p>
+    <pre class="syntax">
+<code>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/audiojs/audio.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+    <span class="nx">audiojs</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">as</span> <span class="o">=</span> <span class="nx">audiojs</span><span class="p">.</span><span class="nx">createAll</span><span class="p">();</span>
+    <span class="p">});</span>
+  <span class="nt">&lt;/script&gt;</span></code>
+    </pre>
+    <p class="note">Whenever I see something technical referred to as "it", I scan backwards and forwards to work out what exactly is being talked about, "it" is a pretty ambiguous term to use here</p>
+    <p class="note">Maybe switch the code example to after talking about the three required files and their placement. Then you can say "init audiojs like this"</p>  
+    <p>It relies on the presence of 3 files:</p>
+    <ol>
+      <li><code>audio.min.js</code> file (the minified version of the main library)</li>
+      <li><code>audiojs.swf</code> (the flash file used to support older browsers)</li>
+      <li>and <code>player-graphics.gif</code> (an animated gif containing the player control graphics)</li>
+    </ol>
+
+    <p>By default audio.js inspects the path to the <code>audio.min.js</code> file and looks for the other two files in the same spot, so it’s easiest to put them all together in the same folder.</p>
+    <p class="note">The following tries to make it sound like a really simplistic task, but perhaps its worth saying that &lt;audio&gt; tags will "just work" now</p>
+    <p>Then you can just dump &lt;audio&gt; tags into your markup wherever you want them.</p>
+    <pre class="syntax">
+<code>
+  <span class="nt">&lt;audio</span> <span class="na">src=</span><span class="s">"/mp3/juicy.mp3"</span> <span class="na">preload=</span><span class="s">"auto"</span><span class="nt">&gt;</span></code>
+    </pre>
+
+    <p> You can read about all the available &lt;audio&gt; attributes here: <a href="http://developer.mozilla.org/En/HTML/Element/Audio">http://developer.mozilla.org/En/HTML/Element/Audio</a>. audio.js handles creating the player, so the <code>controls</code> attribute should not be used.</p>
+    <p class="note">Good. Perhaps be a bit stronger and say that controls must not be used</p> 
+    <h3>The Javascript API</h3>
+    <p class="note">Seperate out this section with a jump link? It feels like different content to the former<p>
+    <p>Both <code>create()</code> and <code>createAll()</code> return one or more audio.js instances.</p>
+
+    <p>You can create single audio.js instances by passing an &lt;audio&gt; element into the <code>create()</code> method like so:</p>
+    <pre class="syntax">
+<code>
+  <span class="nx">audiojs</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">audios</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'audio'</span><span class="p">),</span>
+        <span class="nx">a1</span> <span class="o">=</span> <span class="nx">audiojs</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">audios</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="p">});</span></code>
+    </pre>
+    
+    <p>Each of the instances returned will expose a number of API methods which can be used to control the player.</p>
+    <p>
+      <code>load(file)</code> Load a new file into the player<br>
+      <code>play()</code> Play the current track<br>
+      <code>pause()</code> Pause the current track<br>
+      <code>playPause()</code> Toggle playing/pausing the current track<br>
+      <code>skipTo(percent)</code> Skip to a particular place in the current track
+    </p>
+    
+    <h3>Customisation</h3>
+    <p class="note">It isn't clear what these customisations would actually be useful for? Maybe use a real one of your demos, with a screen shot of how its different to break up the heavy text</p>
+    <p>If you want to get into further customisation, you can also send through an <code>options</code> object to overwrite the default behaviours.</p>
+    <pre class="syntax">
+<code>
+  <span class="c1">// Single instance</span>
+  <span class="nx">audiojs</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">audios</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'audio'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">a1</span> <span class="o">=</span> <span class="nx">audiojs</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">audios</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">{</span>
+      <span class="nx">css</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">createPlayer</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+  <span class="c1">// Or for all instances</span>
+  <span class="nx">audiojs</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">audios</span> <span class="o">=</span> <span class="nx">audiojs</span><span class="p">.</span><span class="nx">createAll</span><span class="p">({</span>
+      <span class="nx">css</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">createPlayer</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">});</span>
+  <span class="p">});</span></code>
+    </pre>
+
+    <p>In the second example <code class="syntax"><span class="kd">var</span> audios = audiojs.createAll...</code>, <code>audios</code> would contain an array of audio.js objects ready to be interacted with.</p>
+
+    <p>Any of the available settings within the <code>options</code> object can be overwritten. The full object looks like this:</p>
+    <p class="note">This so needs to be on the README.markdown or within the source. Is it? Should it be in the article at all?</p>
+    <pre class="syntax">
+<code>
+  <span class="nx">settings</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">autoplay</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">loop</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">preload</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">imageLocation</span><span class="o">:</span> <span class="nx">path</span> <span class="o">+</span> <span class="s1">'player-graphics.gif'</span><span class="p">,</span>
+    <span class="nx">swfLocation</span><span class="o">:</span> <span class="nx">path</span> <span class="o">+</span> <span class="s1">'audiojs.swf'</span><span class="p">,</span>
+    <span class="nx">useFlash</span><span class="o">:</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{})(),</span>
+    <span class="nx">hasFlash</span><span class="o">:</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{})(),</span>
+    <span class="c1">// The default markup and classes for creating the player:</span>
+    <span class="nx">createPlayer</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">markup</span><span class="o">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="c1">// The classes used to target each of the elements </span>
+      <span class="c1">// within the markup</span>
+      <span class="nx">playPauseClass</span><span class="o">:</span> <span class="s1">'play-pause'</span><span class="p">,</span>
+      <span class="nx">scrubberClass</span><span class="o">:</span> <span class="s1">'scrubber'</span><span class="p">,</span>
+      <span class="nx">progressClass</span><span class="o">:</span> <span class="s1">'progress'</span><span class="p">,</span>
+      <span class="nx">loaderClass</span><span class="o">:</span> <span class="s1">'loaded'</span><span class="p">,</span>
+      <span class="nx">timeClass</span><span class="o">:</span> <span class="s1">'time'</span><span class="p">,</span>
+      <span class="nx">durationClass</span><span class="o">:</span> <span class="s1">'duration'</span><span class="p">,</span>
+      <span class="nx">playedClass</span><span class="o">:</span> <span class="s1">'played'</span><span class="p">,</span>
+      <span class="nx">errorMessageClass</span><span class="o">:</span> <span class="s1">'error-message'</span><span class="p">,</span>
+      <span class="nx">playingClass</span><span class="o">:</span> <span class="s1">'playing'</span><span class="p">,</span>
+      <span class="nx">loadingClass</span><span class="o">:</span> <span class="s1">'loading'</span><span class="p">,</span>
+      <span class="nx">errorClass</span><span class="o">:</span> <span class="s1">'error'</span>
+    <span class="p">},</span>
+    <span class="c1">// The css used by the default player. This is is dynamically</span>
+    <span class="c1">// injected into a &lt;style&gt; tag in the top of the head.</span>
+    <span class="nx">css</span><span class="o">:</span> <span class="s1">''</span><span class="p">,</span>
+    <span class="c1">// Event callbacks:</span>
+    <span class="nx">trackEnded</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{},</span>
+    <span class="nx">flashError</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">loadError</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{},</span>
+    <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">loadStarted</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">loadProgress</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">percent</span><span class="p">)</span> <span class="p">{},</span>
+    <span class="nx">playPause</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">play</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">pause</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">updatePlayhead</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">percent</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="p">}</span></code>
+    </pre>
+    
+    <p><code>autoplay</code>, <code>loop</code> and <code>preload</code> can be overwritten by setting the attributes directly on the &lt;audio&gt; tags in your markup.</p>
+
+    <h3>Try it out</h3>
+    
+    <p>audio.js is a simple drop-in script, so if you’re using an audio player on your site already, give it a try and let us know what you think.</p>
+
+    <p>You can check out the demos and download it at <a href="http://kolber.github.com/audiojs/">http://kolber.github.com/audiojs/</a> or get at the source on github here: <a href="http://github.com/kolber/audiojs">http://github.com/kolber/audiojs</a></p>
+  </dd>
+</dl>
+ 
+          <p class="end">
+            <a href="../../">&nbsp;</a>
+          </p>
+        </div>
+      </article>
+    </div>
+    <footer>
+  <div class="wrapper">
+    <p>© ab+c 2011 <a href="http://twitter.com/ab__c">twitter/ab__c</a></p>
+  </div>
+</footer>
+  </body>
+</html>
+<!-- Stacey(2.2.2): ff2a1d4ca409c74f456dda9f11770af5 -->

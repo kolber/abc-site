@@ -1,0 +1,13 @@
+title: Why Flash is Really Dying
+-
+date: January XX, 2011
+-
+published: 2011-01-XXT12:00:00+11:00
+-
+author: Anthony
+-
+collaborator:
+-
+summary: <p class="anthony">Everyone likes to talk about how flash is bad for browser performance, bad for accessibility & bad for SEO, but there is a whole other reason that a lot of us wouldn't mind seeing it die...</p>
+-
+content:

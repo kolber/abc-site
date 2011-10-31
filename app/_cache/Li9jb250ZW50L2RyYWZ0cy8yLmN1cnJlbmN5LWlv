@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>currency.io, ab+c</title>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="../../docs/css/ie.css">
+  <![endif]-->
+  <![if !IE]>
+  <link rel="stylesheet" href="../../docs/css/screen.css">
+  <![endif]>
+
+  <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/abc-articles/">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <meta content="width=device-width; initial-scale=1.0;" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <script>var _gaq=[['_setAccount','UA-5821132-1'],['_trackPageview']];(function(d,t){ var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.async=1;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+  
+  <link rel="stylesheet" href="../../content/drafts/2.currency-io/embedly.css"> 
+  
+</head>
+  <body>
+    <div class="wrapper">
+      <header id="main-header">
+        <h1><a href="../../">ab+c</a> </h1>
+      </header>
+      <article class="full">
+        <header>
+          <time datetime="2011-01-XXT12:00:00+11:00">January XX, 2011 —</time>
+          <h1><a href="../">currency.io</a></h1>
+          <h2>
+            Ben /
+                         Anthony
+            
+          </h2>
+        </header>
+        <div class="content">
+          <div class="summary">
+            <p class="anthony">We’ve finally put the finishing touches on a project we’ve been working on in bits and pieces for the last few months. It’s called currency.io, a html5 currency converter built for the iPhone.</p>
+
+          </div>
+          
+ 
+          <figure class="intro">
+  <img src="../../content/drafts/2.currency-io/currency-article-header.png" alt="">
+</figure>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>Last year, a week before departing to Japan, I reminded myself of the "its about ¾'s of our dollar, so…" translation that goes on in your head when abroad. I grabbed my iPhone and perused the App Store™. I sighed disappointedly, only, this time I decided to <em>not</em> skeptically tap the "buy now" button.</p>
+    <p>I wanted to build something for <em>me</em>, keep it simple and use the newest of techniques. Plenty of HTML/JS frameworks had popped up in the last two years, many focusing on mobile application development, but most failed to realise that a framework for rudimentary markup and javascript apis is total overkill.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>We’ve always believed very strongly in the idea that the future of application development will be centred around web technologies. It’s hard to argue with the potential cross-OS, cross-device compatibility that HTML, CSS & Javascript can provide.</p>
+  </dd>
+</dl>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p>Not only that—devices aside, we're all relatively new to building apps for mobile, the techniques are young, but the web is finally moving quickly again. Training new HTML application developers is cheaper and yields far quicker development turnarounds.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>The major conceptual difference between a webapp and an app has always been primarily defined by the browser chrome (toolbars, navigation buttons, address bar, etc.) wrapped around it. A few years ago, the page refresh was a defining factor as well, but the onset of ajax has helped negate this.</p>
+    <p>For mobile, the combination of two relatively recent inventions, iOS’ ‘Add to Home Screen’ functionality and implementation of html5’s offline caching, has opened up the potential to build quite full-featured webapps that can, in theory, do as much as a cocoa codebase.</p>
+<!--
+    <p>For the desktop, two technologies once provided the hope that the desktop-deployable web apps would become a realistic possibility, <a href="http://prism.mozillalabs.com/">Prism</a> & <a href="http://fluidapp.com/">Fluid</a>. Sadly both projects have fallen by the wayside, hampered by a lack of documentation and spam-filled newsgroups.</p>
+    <p class="note">Relevance? Could probably shorten this section. Or even reference IE's new pinning stuff. (I saw it demoed at web directions last year, its pretty good.)</p>
+-->
+    <p>This opens up some interesting opportunities as the power and speed that a single codebase gives you cannot be underestimated. If rather than maintaining separate iPhone, iPad, Android and web-based applications, a company like twitter was able to dedicate itself to just one, then its resources could be working much more directly on the improvement of the whole service. Rather than constantly playing feature catchup amongst all of its splintered codebases.</p>
+    <p class="note">Above is fine, but I wonder what you were getting at?</p>
+  </dd>
+</dl>
+
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <p class="note">Talk about the benefit of a continuously deployed app? About how the growth of web-tech has resulted in an explosion of tools and best practice examples?</p>
+    <p class="note">Nothing to fill here for now. I might wait to see what you say about developing for webkit.</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p class="note">Developing for webkit is awesome [to be expanded]</p>
+  </dd>
+</dl>
+
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <p>So, this is it, currency.io, our first attempt at creating an app-like experience using web technologies.</p>
+    <p>We’ve decided to open-source the project in the hope that something can be learnt from it, so that we can collectively start building best practices for this type of development.</p>
+    <p>You can install the app here: <a href="http://currency.io">http://currency.io</a><br>
+      and get at the source on github: <a href="http://github.com/bschwarz/currencyio">http://github.com/bschwarz/currencyio</a></p>
+    <p class="note">I’ve kept the whole previous article commented out within this page...</p>
+  </dd>
+</dl>
+
+<footer id="sell-sell-sell">
+  <p>If you're looking to build for mobile web, we're looking for Q3 bookings. Get in touch.</p>
+</footer>
+
+<!--
+<dl class="ben">
+  <dt>Ben/</dt>
+  <dd>
+    <h3>The project</h3>
+
+    <p>Like anyone else, I could have logged into the app store, read some reviews, then skeptically tapped on the "buy now" button.</p>
+    
+    <p><strike>I'd known about localStorage for quite some time, even using it for a billable project (only once!), but it felt like no one had ever really going past googling 'iphone css app'.</strike></p>
+
+    <h3>The descent</h3>
+    <p>With everyone seemingly jostleing to own the dominant mobile web framework, you'd think that we'd have some solid options through competition.</p>
+    
+    <aside>
+      <div id='embedly_twitter_40264114' class='embedly_twitter'<p>Was asked why I "insist on coding JS from scratch" for mobile. jQTouch: 100k. jQ mobile: 160k. Sencha: 400k. My script: 1k. That's why.<span class='embedly_timestamp'><a title='Thu Jan 20 02:20:20 +0000 2011' href='http://twitter.com/pixi_stix/status/27913287215620096'>Jan 20</a> via web</span><span class='metadata'><span class='author'><a href='http://twitter.com/pixi_stix'><img src='http://a1.twimg.com/profile_images/373263968/DSC08216_normal.jpg' /></a><strong><a href='http://twitter.com/pixi_stix'>Colleen O'Banion</a></strong><br/>pixi_stix</span></span></p></div>
+    </aside>
+
+    <p>Projects like PhoneGap and jQtouch have "commoditised" the act of building a mobile application for iOS devices, yet I'm still yet to see an app that I wanted to actually use that used either of these frameworks.</p>
+    <p class="note">Maybe Anthony can lay in on this bit following?</p>
+    <p>Of course, this isn't a problem with the technology, its a design/mindset problem.</p>
+  </dd>
+</dl>
+<dl class="anthony">
+  <dt>Anthony/</dt>
+  <dd>
+    <h3>Starting out</h3>
+
+    <p>We both agreed that there was some interesting potential here. The idea of designing an iphone app in html was definitely an appealing one, coming from where we come from. So I took the initial proof-of-concept and started designing it as a real app.</p>
+
+    <pre class="note">
+      ab+c article
+      - about building a believable application using web technology
+    </pre>
+  </dd>
+</dl>
+--> 
+          <p class="end">
+            <a href="../../">&nbsp;</a>
+          </p>
+        </div>
+      </article>
+    </div>
+    <footer>
+  <div class="wrapper">
+    <p>© ab+c 2011 <a href="http://twitter.com/ab__c">twitter/ab__c</a></p>
+  </div>
+</footer>
+  </body>
+</html>
+<!-- Stacey(2.2.2): f3e2bb4af8d9e0179f8766fcddc31c42 -->

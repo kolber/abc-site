@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Drafts, ab+c</title>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="../docs/css/ie.css">
+  <![endif]-->
+  <![if !IE]>
+  <link rel="stylesheet" href="../docs/css/screen.css">
+  <![endif]>
+
+  <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/abc-articles/">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <meta content="width=device-width; initial-scale=1.0;" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <script>var _gaq=[['_setAccount','UA-5821132-1'],['_trackPageview']];(function(d,t){ var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.async=1;g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+  
+  
+  
+</head>
+  <body>
+    <div class="wrapper">
+      <header id="main-header">
+        <h1><a href="../">ab+c</a> </h1>
+        <h2>We are a design/development team.<a href="/about/">††</a> <br>This is where we write about what we do.</h2>
+
+      </header>
+        <div id="article-list">
+      <article class="summary">
+      <header>
+        <time datetime="2011-01-XXT12:00:00+11:00">January XX, 2011 —</time>
+        <h1><a href="../drafts/audio-js/" rel="prefetch">audio.js</a></h1>
+      </header>
+      <div class="content">
+        <h2>
+          Anthony /
+          
+        </h2>
+        <p class="anthony">audio.js is a javascript library which allows the html5 &lt;audio&gt; tag to be used anywhere. It works on iOS devices and degrades gracefully, using an invisible flash movie to add support for older browsers.</p>
+        <p>—&nbsp;<a href="../drafts/audio-js/" rel="prefetch">Continued</a></p>
+      </div>
+    </article>
+      <article class="summary">
+      <header>
+        <time datetime="2011-01-XXT12:00:00+11:00">January XX, 2011 —</time>
+        <h1><a href="../drafts/html5-doctor/" rel="prefetch">html5doctor / How to build an iPhone app in html</a></h1>
+      </header>
+      <div class="content">
+        <h2>
+          Ben /
+                      Anthony
+          
+        </h2>
+        ...
+        <p>—&nbsp;<a href="../drafts/html5-doctor/" rel="prefetch">Continued</a></p>
+      </div>
+    </article>
+      <article class="summary">
+      <header>
+        <time datetime="2011-01-XXT12:00:00+11:00">January XX, 2011 —</time>
+        <h1><a href="../drafts/currency-io/" rel="prefetch">currency.io</a></h1>
+      </header>
+      <div class="content">
+        <h2>
+          Ben /
+                      Anthony
+          
+        </h2>
+        <p class="anthony">We’ve finally put the finishing touches on a project we’ve been working on in bits and pieces for the last few months. It’s called currency.io, a html5 currency converter built for the iPhone.</p>
+
+        <p>—&nbsp;<a href="../drafts/currency-io/" rel="prefetch">Continued</a></p>
+      </div>
+    </article>
+      <article class="summary">
+      <header>
+        <time datetime="2011-01-XXT12:00:00+11:00">January XX, 2011 —</time>
+        <h1><a href="../drafts/flash/" rel="prefetch">Why Flash is Really Dying</a></h1>
+      </header>
+      <div class="content">
+        <h2>
+          Anthony /
+          
+        </h2>
+        <p class="anthony">Everyone likes to talk about how flash is bad for browser performance, bad for accessibility & bad for SEO, but there is a whole other reason that a lot of us wouldn't mind seeing it die...</p>
+        <p>—&nbsp;<a href="../drafts/flash/" rel="prefetch">Continued</a></p>
+      </div>
+    </article>
+  
+  </div>
+
+
+    </div>
+    <footer>
+  <div class="wrapper">
+    <p>© ab+c 2011 <a href="http://twitter.com/ab__c">twitter/ab__c</a></p>
+  </div>
+</footer>
+  </body>
+</html>
+<!-- Stacey(2.2.2): 81b350f79282c5abd70a1528575ddceb -->
