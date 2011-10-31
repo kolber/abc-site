@@ -36,7 +36,8 @@ a {
   transition:         color linear 750ms,
                       background linear 750ms; }
 a.back {
-  left: 50%; }
+  left: 50%;
+  outline: 0.1em solid #f2f2f2; }
 a:hover {
   background: #fff; color: #333; }
 
